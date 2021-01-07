@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 ///
 /// Contents: City class for Euclidean TSP.
 /// Author:   John Aronis
@@ -7,7 +9,7 @@
 public class City {
 
   public String name ;
-
+  public ArrayList<City> adjacent = new ArrayList<City>(10000);
   public double x, y ;
 
   public City(String name, double x, double y) {
@@ -22,6 +24,14 @@ public class City {
 
   public String toString() {
     return name ;
+  }
+
+  public void addAdjacent(City c){
+
+
+      adjacent.add(c);
+
+
   }
 
 }
